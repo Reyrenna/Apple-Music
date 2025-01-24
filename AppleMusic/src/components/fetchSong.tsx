@@ -9,7 +9,7 @@ function Fetch() {
   const getSong = async () => {
     try {
       const response = await fetch(
-        "https://striveschool-api.herokuapp.com/api/deezer/search?q=Nirvana"
+        "https://striveschool-api.herokuapp.com/api/deezer/search?q=Marco-Castello"
       );
       if (response.ok) {
         const data = await response.json();
@@ -26,7 +26,7 @@ function Fetch() {
   }, []);
 
   const Array = Song?.data.map;
-
+  console.log(Array);
   return (
     <>
       <div className=" bg-dark p-4">
@@ -40,73 +40,109 @@ function Fetch() {
           <Col xs={4} md={2}>
             <Card className=" bg-transparent text-start  text-light p-0 border-0">
               <Card.Img
-                // src={Array.}
+                src={
+                  Song?.data
+                    ? Song?.data[0].artist.picture_medium
+                    : "https://placehold.co/400x400"
+                }
                 className=" rounded-2"
               />
               <Card.Text className=" m-0 fw-semibold">
-                Qui ci va il nome della canzone
+                {Song?.data ? Song?.data[0].title : "Song Name"}
               </Card.Text>
-              <Card.Text>Qui ci va il nome dell'artista</Card.Text>
+              <Card.Text>
+                {Song?.data ? Song?.data[0].artist.name : "Artist Name"}
+              </Card.Text>
             </Card>
           </Col>
           <Col xs={4} md={2}>
             <Card className=" bg-transparent text-start  text-light p-0 border-0">
               <Card.Img
-                src="https://placehold.co/400x400"
+                src={
+                  Song?.data
+                    ? Song?.data[1].artist.picture_medium
+                    : "https://placehold.co/400x400"
+                }
                 className=" rounded-2"
               />
               <Card.Text className=" m-0 fw-semibold">
-                Qui ci va il nome della canzone
+                {Song?.data ? Song?.data[1].title : "Song Name"}
               </Card.Text>
-              <Card.Text>Qui ci va il nome dell'artista</Card.Text>
+              <Card.Text>
+                {Song?.data ? Song?.data[1].artist.name : "Artist Name"}
+              </Card.Text>
             </Card>
           </Col>
           <Col xs={4} md={2}>
             <Card className=" bg-transparent text-start  text-light p-0 border-0">
               <Card.Img
-                src="https://placehold.co/400x400"
+                src={
+                  Song?.data
+                    ? Song?.data[2].artist.picture_medium
+                    : "https://placehold.co/400x400"
+                }
                 className=" rounded-2"
               />
               <Card.Text className=" m-0 fw-semibold">
-                Qui ci va il nome della canzone
+                {Song?.data ? Song?.data[2].title : "Song Name"}
               </Card.Text>
-              <Card.Text>Qui ci va il nome dell'artista</Card.Text>
+              <Card.Text>
+                {Song?.data ? Song?.data[2].artist.name : "Artist Name"}
+              </Card.Text>
             </Card>
           </Col>
           <Col xs={4} md={2}>
             <Card className=" bg-transparent text-start  text-light p-0 border-0">
               <Card.Img
-                src="https://placehold.co/400x400"
+                src={
+                  Song?.data
+                    ? Song?.data[3].artist.picture_medium
+                    : "https://placehold.co/400x400"
+                }
                 className=" rounded-2"
               />
               <Card.Text className=" m-0 fw-semibold">
-                Qui ci va il nome della canzone
+                {Song?.data ? Song?.data[3].title : "Song Name"}
               </Card.Text>
-              <Card.Text>Qui ci va il nome dell'artista</Card.Text>
+              <Card.Text>
+                {Song?.data ? Song?.data[3].artist.name : "Artist Name"}
+              </Card.Text>
             </Card>
           </Col>
           <Col xs={4} md={2}>
             <Card className=" bg-transparent text-start  text-light p-0 border-0">
               <Card.Img
-                src="https://placehold.co/400x400"
+                src={
+                  Song?.data
+                    ? Song?.data[4].artist.picture_medium
+                    : "https://placehold.co/400x400"
+                }
                 className=" rounded-2"
               />
               <Card.Text className=" m-0 fw-semibold">
-                Qui ci va il nome della canzone
+                {Song?.data ? Song?.data[4].title : "Song Name"}
               </Card.Text>
-              <Card.Text>Qui ci va il nome dell'artista</Card.Text>
+              <Card.Text>
+                {Song?.data ? Song?.data[4].artist.name : "Artist Name"}
+              </Card.Text>
             </Card>
           </Col>
           <Col xs={4} md={2}>
             <Card className=" bg-transparent text-start  text-light p-0 border-0">
               <Card.Img
-                src="https://placehold.co/400x400"
+                src={
+                  Song?.data
+                    ? Song?.data[5].artist.picture_medium
+                    : "https://placehold.co/400x400"
+                }
                 className=" rounded-2"
               />
               <Card.Text className=" m-0 fw-semibold">
-                Qui ci va il nome della canzone
+                {Song?.data ? Song?.data[5].title : "Song Name"}
               </Card.Text>
-              <Card.Text>Qui ci va il nome dell'artista</Card.Text>
+              <Card.Text>
+                {Song?.data ? Song?.data[5].artist.name : "Artist Name"}
+              </Card.Text>
             </Card>
           </Col>
         </Row>
